@@ -15,6 +15,12 @@ npm run preview    # ビルド結果の確認
 
 `dist/` は相対パスで出力されるため、GitHub Pages・itch.io（HTML5）など任意の静的ホスティングにそのまま置けます。
 
+## GitHub Pages への公開
+
+`.github/workflows/deploy.yml` が、`main` への push（または Actions 画面からの手動実行）のたびにテスト・ビルドを行い、GitHub Pages へデプロイします。
+
+初回だけ、リポジトリの **Settings → Pages → Build and deployment → Source** を **GitHub Actions** にしてください。公開先は `https://<ユーザー名>.github.io/<リポジトリ名>/` です。
+
 ## 構成
 
 | ディレクトリ | 内容 | Godot 版の対応 |
